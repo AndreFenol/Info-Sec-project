@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">CB Fashion</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <h1>Tino</h1>
+    </header>
+
+    <main>
+        <h2>Custom Order Form</h2>
+        <form action="submit_order.html" method="post" enctype="multipart/form-data">
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" name="product-name" required>
+
+            <label for="description">Description</label>
+            <input type="text" id="description" name="description" required>
+
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" name="quantity" required>
+
+            <label for="size">Size</label>
+            <input type="text" id="size" name="size" required>
+
+            <label for="file1">Attach File Here</label>
+            <input type="file" id="file1" name="file1">
+
+            <label for="file2">Attach File Here</label>
+            <input type="file" id="file2" name="file2">
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="address.html">Address</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+            <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

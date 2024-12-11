@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="AdminDashboardStyle.css">
+    <script defer src="AdminDashboard.js"></script>
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">Admin Panel</div>
+            <ul class="menu">
+                <li><a href="#dashboard" class="active">Dashboard</a></li>
+                <li><a href="#ui-elements">UI Elements</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#charts">Charts</a></li>
+                <li><a href="#maps">Maps</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="main-header">
+                <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+                <div class="header-actions">
+                    <span class="notification">🔔</span>
+                    <span class="profile">Admin</span>
+                </div>
+            </header>
+
+            <section class="dashboard">
+                <h1>Dashboard</h1>
+
+                <!-- Stats Cards -->
+                <div class="cards">
+                    <div class="card success">
+                        <h2 id="orders-completed">0</h2>
+                        <p>Orders completed</p>
+                    </div>
+                    <div class="card info">
+                        <h2 id="new-orders">0</h2>
+                        <p>New Orders</p>
+                    </div>
+                    <div class="card warning">
+                        <h2 id="members-count">0</h2>
+                        <p>Members</p>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="charts">
+                    <div class="chart">
+                        <h2>Traffic Overview</h2>
+                        <canvas id="trafficChart"></canvas>
+                    </div>
+                    <div class="chart">
+                        <h2>User Demographics</h2>
+                        <canvas id="demographicsChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

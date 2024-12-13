@@ -117,14 +117,6 @@ main {
     background-color: #3a0707;
 }
 
-.login-container button.admin-login {
-    background-color: #007bff;
-}
-
-.login-container button.admin-login:hover {
-    background-color: #0056b3;
-}
-
 .login-container a {
     text-decoration: none;
     color: #4c0b0b;

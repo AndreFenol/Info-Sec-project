@@ -14,21 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
         return true;
     }
 
-    // Handle regular user login
+    // Handle user login
     loginForm.addEventListener("submit", function (event) {
         event.preventDefault();
         if (validateForm()) {
             alert("User login successful!");
-            window.location.href = "index.html"; // Replace with user homepage
+            window.location.href = "Homepage.html"; // Replace with user homepage
         }
     });
 
-    // Handle admin login
-    adminLoginBtn.addEventListener("click", function (event) {
-        event.preventDefault();
-        if (validateForm()) {
-            alert("Admin login successful!");
-            window.location.href = "AdminDashboard.html"; // Replace with admin dashboard page
-        }
-    });
 });
+

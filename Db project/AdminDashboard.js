@@ -9,27 +9,27 @@ document.addEventListener("DOMContentLoaded", function () {
         mainContent.classList.toggle("expanded");
     });
 
-    // Function to fetch dashboard data
+    // Fetch dashboard data
     async function fetchDashboardData() {
         try {
-            const response = await fetch('/api/dashboard-data'); // Replace with your backend API endpoint
+            const response = await fetch('/api/dashboard-data'); // Replace with your backend endpoint
             if (!response.ok) throw new Error("Failed to fetch dashboard data");
 
             const data = await response.json();
 
-            // Update stats
-            document.getElementById("orders-completed").innerText = data.ordersCompleted || 0;
-            document.getElementById("new-orders").innerText = data.newOrders || 0;
-            document.getElementById("members-count").innerText = data.members || 0;
+            // Update metrics
+            document.getElementById("posts-published").innerText = data.postsPublished || 0;
+            document.getElementById("new-comments").innerText = data.newComments || 0;
+            document.getElementById("registered-members").innerText = data.registeredMembers || 0;
 
-            // Optional: Update charts dynamically
+            // Update charts dynamically
             updateCharts(data.chartData);
         } catch (error) {
             console.error("Error fetching dashboard data:", error);
         }
     }
 
-    // Example function to update charts (if needed)
+    // Chart initialization
     function updateCharts(chartData) {
         const trafficCtx = document.getElementById("trafficChart").getContext("2d");
         new Chart(trafficCtx, {
@@ -46,20 +46,20 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        const demographicsCtx = document.getElementById("demographicsChart").getContext("2d");
-        new Chart(demographicsCtx, {
-            type: "pie",
+        const commentCtx = document.getElementById("commentChart").getContext("2d");
+        new Chart(commentCtx, {
+            type: "bar",
             data: {
-                labels: chartData.demographics.labels || [],
+                labels: chartData.comments.labels || [],
                 datasets: [{
-                    label: "Users",
-                    data: chartData.demographics.data || [],
-                    backgroundColor: ["#007bff", "#dc3545", "#ffc107"]
+                    label: "Comments",
+                    data: chartData.comments.data || [],
+                    backgroundColor: "#007bff"
                 }]
             }
         });
     }
 
-    // Initial data fetch
+    // Fetch data on load
     fetchDashboardData();
 });

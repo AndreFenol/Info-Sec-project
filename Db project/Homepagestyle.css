@@ -1,3 +1,4 @@
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     color: #000000;
 }
 
+/* Header styles */
 header {
     background-color: #4c0b0b;
     padding: 30px 0;
@@ -45,11 +47,13 @@ nav ul li a {
     font-size: 16px;
 }
 
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main hero section */
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 100px);
+    padding: 20px 0 60px;
     background-color: #fff;
 }
 
@@ -60,6 +64,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    gap: 20px;
 }
 
 .hero-text {
@@ -67,24 +72,32 @@ main {
 }
 
 .hero-text h2 {
-    font-size: 55px;
+    font-size: 48px;
     color: #4c0b0b;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #333;
     margin-bottom: 20px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .hero-buttons button {
-    padding: 10px 20px;
+    padding: 10px 25px;
     background-color: #4c0b0b;
     color: #fff;
     border: none;
     border-radius: 25px;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .hero-buttons button:hover {
@@ -94,15 +107,74 @@ main {
 .hero-image img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }
 
+/* Recent posts section */
+.recent-posts {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.recent-posts h2 {
+    font-size: 32px;
+    color: #4c0b0b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.post {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post h3 {
+    font-size: 20px;
+    color: #4c0b0b;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.post a {
+    text-decoration: none;
+    color: #4c0b0b;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.post a:hover {
+    color: #3a0707;
+}
+
+/* Footer styles */
 footer {
     background-color: #4c0b0b;
-    padding: 50px 0;
+    padding: 30px 0;
     color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 .footer-container {
@@ -122,13 +194,23 @@ footer {
 .footer-links a {
     text-decoration: none;
     color: #fff;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ddd;
 }
 
 .social-media a {
     margin-left: 10px;
+    transition: opacity 0.2s ease;
 }
 
 .social-media img {
     width: 20px;
     height: 20px;
+}
+
+.social-media a:hover img {
+    opacity: 0.8;
 }

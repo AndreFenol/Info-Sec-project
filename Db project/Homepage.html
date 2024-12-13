@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CB Fashion</title>
+    <title>CB Fashion - Blog</title>
     <link rel="stylesheet" href="Homepagestyle.css">
 </head>
 <body>
@@ -14,26 +14,49 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="posts.html">Posts</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
+        <!-- Hero Section -->
         <div class="hero-container">
             <div class="hero-text">
-                <h2>THE PERFECT TAILOR FOR YOUR WARDROBE NEEDS.</h2>
+                <h2>WELCOME TO CB FASHION</h2>
+                <p>Discover the latest fashion trends!</p>
                 <div class="hero-buttons">
-                    <button onclick="window.location.href='#login'">LOGIN</button>
-                    <button onclick="window.location.href='#register'">Register</button>
+                    <button onclick="window.location.href='login.html'">LOGIN</button>
+                    <button onclick="window.location.href='register.html'">Register</button>
                 </div>
             </div>
             <div class="hero-image">
                 <img src="image.png" alt="Clothes">
             </div>
         </div>
+
+        <!-- Recent Posts Section -->
+        <section class="recent-posts">
+            <h2>Recent Posts</h2>
+            <div class="posts-container">
+                <!-- Example post items (to be dynamically populated) -->
+                <div class="post">
+                    <h3>5 Top sellers</h3>
+                    <p>Stay stylish year-round with these wardrobe essentials...</p>
+                    <a href="post-details.html">Read More</a>
+                </div>
+                <div class="post">
+                    <h3>Top 10 Fashion Trends of 2024</h3>
+                    <p>Discover the most popular fashion trends for the upcoming year...</p>
+                    <a href="post-details.html">Read More</a>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
         <div class="footer-container">
             <div class="social-media">
@@ -41,9 +64,9 @@
                 <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
             </div>
             <div class="footer-links">
-                <a href="#">Contact Us!</a>
+                <a href="#">Contact Us</a>
                 <a href="#">Address</a>
-                <a href="#">Inquire Now!</a>
+                <a href="#">Inquire Now</a>
             </div>
         </div>
     </footer>

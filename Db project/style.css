@@ -1,3 +1,4 @@
+/* Base Style */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@ body {
     background-color: #ffffff;
     color: #000000;
 }
-
+/* Header Styles */
 header {
     background-color: #4c0b0b;
     padding: 30px 0;
@@ -43,29 +44,43 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 16px;
+    transition: color 0.3s ease;
 }
 
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Main Login Section */
 main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 180px);
+    height: calc(100vh - 200px);
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
 .login-container {
     text-align: center;
+    background-color: #ffffff;
     border: 1px solid #ddd;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
 }
 
 .login-container h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    color: #4c0b0b;
 }
 
 .login-container p {
     margin-bottom: 20px;
+    color: #555;
 }
 
 .login-container form {
@@ -75,33 +90,53 @@ main {
 }
 
 .login-container input {
-    width: 300px;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
+    color: #333;
 }
 
 .login-container button {
-    width: 320px;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     background-color: #4c0b0b;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #3a0707;
 }
 
 .login-container button.admin-login {
-    background-color: #3a0707;
+    background-color: #007bff;
+}
+
+.login-container button.admin-login:hover {
+    background-color: #0056b3;
 }
 
 .login-container a {
     text-decoration: none;
     color: #4c0b0b;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+.login-container a:hover {
+    color: #3a0707;
+}
+
+/* Footer */
 footer {
     background-color: #4c0b0b;
     padding: 50px 0;
@@ -125,13 +160,24 @@ footer {
 .footer-links a {
     text-decoration: none;
     color: #fff;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ddd;
 }
 
 .social-media a {
     margin-left: 10px;
+    transition: opacity 0.3s ease;
 }
 
 .social-media img {
     width: 20px;
     height: 20px;
+}
+
+.social-media a:hover img {
+    opacity: 0.8;
 }

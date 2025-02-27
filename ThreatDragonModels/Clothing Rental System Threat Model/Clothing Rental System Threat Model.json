@@ -1,6 +1,5 @@
 {
-  "version": "2.3.0",
-   "summary": {
+  "summary": {
     "title": "Clothing Rental System Threat Model",
     "owner": "AndreFenol",
     "description": "Threat model for a clothing rental system with a public interface (login, register, homepage) and an admin interface (post & account management).",

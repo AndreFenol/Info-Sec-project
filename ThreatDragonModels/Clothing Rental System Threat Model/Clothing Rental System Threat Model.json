@@ -1,6 +1,6 @@
 {
   "version": "2.3.0",
-  "summary": {
+   "summary": {
     "title": "Clothing Rental System Threat Model",
     "owner": "AndreFenol",
     "description": "Threat model for a clothing rental system with a public interface (login, register, homepage) and an admin interface (post & account management).",
@@ -8,909 +8,292 @@
   },
   "detail": {
     "contributors": [
-      {
-        "name": "AndreFenol"
-      }
+      { "name": "AndreFenol" }
     ],
     "diagrams": [
       {
-        "cells": [
+        "id": 0,
+        "name": "Clothing Rental System Architecture",
+        "elements": [
           {
-            "position": {
-              "x": 100,
-              "y": 50
-            },
-            "size": {
-              "width": 120,
-              "height": 60
-            },
-            "attrs": {
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "actor",
-            "zIndex": 1,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "2ea075e3-cce2-447c-b540-69947cf6925f"
-                },
-                {
-                  "group": "right",
-                  "id": "d6ff6e2e-aa36-4b5b-9e92-bb3afd35ac45"
-                },
-                {
-                  "group": "bottom",
-                  "id": "a1a65a6a-5090-428e-be60-72d020760557"
-                },
-                {
-                  "group": "left",
-                  "id": "47a2b941-4144-4f53-98bf-44fa32983ea4"
-                }
-              ]
-            },
-            "id": "actor1",
-            "data": {
-              "name": "Customer (E1)",
-              "description": "",
-              "type": "tm.Actor",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
-              "providesAuthentication": false
-            }
+            "id": "E1",
+            "type": "Actor",
+            "name": "Customer",
+            "description": "Public user who browses and rents clothes.",
+            "x": 100,
+            "y": 50,
+            "width": 120,
+            "height": 60
           },
           {
-            "position": {
-              "x": 300,
-              "y": 50
-            },
-            "size": {
-              "width": 160,
-              "height": 60
-            },
-            "attrs": {
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "zIndex": 2,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "6d604cfb-594a-44ad-84fe-615d5b69ed1c"
-                },
-                {
-                  "group": "right",
-                  "id": "70884c94-9061-42c8-8654-8c6fc20c88c5"
-                },
-                {
-                  "group": "bottom",
-                  "id": "1ba35a36-7e83-472a-9576-647a75eddf4f"
-                },
-                {
-                  "group": "left",
-                  "id": "d66a9bc2-a5e1-499f-9b1b-6539eaeebe81"
-                }
-              ]
-            },
-            "id": "process1",
-            "data": {
-              "name": "Public Web App (E2)",
-              "description": "",
-              "type": "tm.Process",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false
-            }
+            "id": "E2",
+            "type": "Process",
+            "name": "Public Web App",
+            "description": "Handles login, registration, and displays clothing.",
+            "x": 300,
+            "y": 50,
+            "width": 160,
+            "height": 60
           },
           {
-            "position": {
-              "x": 550,
-              "y": 50
-            },
-            "size": {
-              "width": 140,
-              "height": 60
-            },
-            "attrs": {
-              "topLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              },
-              "bottomLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "store",
-            "zIndex": 3,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "e901cb08-d263-4280-a4c8-20edb4f26e9a"
-                },
-                {
-                  "group": "right",
-                  "id": "20306c17-ea9d-4c91-9ee6-16a405a95b40"
-                },
-                {
-                  "group": "bottom",
-                  "id": "b86bc974-f55f-4beb-b86f-bc6e8a63af0f"
-                },
-                {
-                  "group": "left",
-                  "id": "1c6cf1a9-50b1-4d9f-898b-f0a14cfbe0c9"
-                }
-              ]
-            },
-            "id": "store1",
-            "data": {
-              "name": "Database (E3)",
-              "description": "",
-              "type": "tm.Store",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
-              "isALog": false,
-              "storesCredentials": false,
-              "isEncrypted": false,
-              "isSigned": false
-            }
+            "id": "E3",
+            "type": "DataStore",
+            "name": "Database",
+            "description": "Stores user data, inventory, orders, etc.",
+            "x": 550,
+            "y": 50,
+            "width": 140,
+            "height": 60
           },
           {
-            "position": {
-              "x": 100,
-              "y": 200
-            },
-            "size": {
-              "width": 120,
-              "height": 60
-            },
-            "attrs": {
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "actor",
-            "zIndex": 4,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "68448f41-cf4d-4979-ab3b-286a929d6256"
-                },
-                {
-                  "group": "right",
-                  "id": "2ba107f3-c3aa-4b54-9113-ff125829b70b"
-                },
-                {
-                  "group": "bottom",
-                  "id": "3f49b7e2-7936-4006-b560-953200ca5dd0"
-                },
-                {
-                  "group": "left",
-                  "id": "61d4bf7e-ffdd-4569-ba95-2a1c8de9eb49"
-                }
-              ]
-            },
-            "id": "actor2",
-            "data": {
-              "name": "Admin (E4)",
-              "description": "",
-              "type": "tm.Actor",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
-              "providesAuthentication": false
-            }
+            "id": "E4",
+            "type": "Actor",
+            "name": "Admin",
+            "description": "Privileged user managing posts/accounts.",
+            "x": 100,
+            "y": 200,
+            "width": 120,
+            "height": 60
           },
           {
-            "position": {
-              "x": 300,
-              "y": 200
-            },
-            "size": {
-              "width": 160,
-              "height": 60
-            },
-            "attrs": {
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "zIndex": 5,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "41d433b0-d2cd-485e-8cf0-6f52fc206622"
-                },
-                {
-                  "group": "right",
-                  "id": "977c8828-f714-4c50-8cca-5164e605aaa4"
-                },
-                {
-                  "group": "bottom",
-                  "id": "dcfe7455-0c6d-40ce-a32c-82bafa81f987"
-                },
-                {
-                  "group": "left",
-                  "id": "fbf053d1-5e8e-4ebe-bb7e-7cd5926a6833"
-                }
-              ]
-            },
-            "id": "process2",
-            "data": {
-              "name": "Admin Dashboard (E5)",
-              "description": "",
-              "type": "tm.Process",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "labels": [
-              {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
-                "attrs": {
-                  "labelText": {
-                    "text": "",
-                    "textAnchor": "middle",
-                    "textVerticalAnchor": "middle"
-                  },
-                  "labelBody": {
-                    "ref": "labelText",
-                    "refRx": "50%",
-                    "refRy": "60%",
-                    "fill": "#fff",
-                    "strokeWidth": 0
-                  },
-                  "label": {
-                    "text": "Customer -> Public Web App"
-                  }
-                },
-                "position": {
-                  "distance": 0.5,
-                  "args": {
-                    "keepGradient": true,
-                    "ensureLegibility": true
-                  }
-                }
-              }
-            ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Customer -> Public Web App",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "isTrustBoundary": false
-            },
-            "id": "521e9e1c-9368-401e-9231-9a1bac669780",
-            "source": {
-              "cell": "actor1"
-            },
-            "target": {
-              "cell": "process1"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "labels": [
-              {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
-                "attrs": {
-                  "labelText": {
-                    "text": "",
-                    "textAnchor": "middle",
-                    "textVerticalAnchor": "middle"
-                  },
-                  "labelBody": {
-                    "ref": "labelText",
-                    "refRx": "50%",
-                    "refRy": "60%",
-                    "fill": "#fff",
-                    "strokeWidth": 0
-                  },
-                  "label": {
-                    "text": "Public Web App -> Database"
-                  }
-                },
-                "position": {
-                  "distance": 0.5,
-                  "args": {
-                    "keepGradient": true,
-                    "ensureLegibility": true
-                  }
-                }
-              }
-            ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Public Web App -> Database",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "isTrustBoundary": false
-            },
-            "id": "8d115f9e-236d-4bf8-9b3e-3ff8a663f33a",
-            "source": {
-              "cell": "process1"
-            },
-            "target": {
-              "cell": "store1"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "labels": [
-              {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
-                "attrs": {
-                  "labelText": {
-                    "text": "",
-                    "textAnchor": "middle",
-                    "textVerticalAnchor": "middle"
-                  },
-                  "labelBody": {
-                    "ref": "labelText",
-                    "refRx": "50%",
-                    "refRy": "60%",
-                    "fill": "#fff",
-                    "strokeWidth": 0
-                  },
-                  "label": {
-                    "text": "Admin -> Admin Dashboard"
-                  }
-                },
-                "position": {
-                  "distance": 0.5,
-                  "args": {
-                    "keepGradient": true,
-                    "ensureLegibility": true
-                  }
-                }
-              }
-            ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Admin -> Admin Dashboard",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "isTrustBoundary": false
-            },
-            "id": "22a789f7-a7bb-40eb-bcef-717a9232b7ee",
-            "source": {
-              "cell": "actor2"
-            },
-            "target": {
-              "cell": "process2"
-            },
-            "vertices": []
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "labels": [
-              {
-                "markup": [
-                  {
-                    "tagName": "ellipse",
-                    "selector": "labelBody"
-                  },
-                  {
-                    "tagName": "text",
-                    "selector": "labelText"
-                  }
-                ],
-                "attrs": {
-                  "labelText": {
-                    "text": "",
-                    "textAnchor": "middle",
-                    "textVerticalAnchor": "middle"
-                  },
-                  "labelBody": {
-                    "ref": "labelText",
-                    "refRx": "50%",
-                    "refRy": "60%",
-                    "fill": "#fff",
-                    "strokeWidth": 0
-                  },
-                  "label": {
-                    "text": "Admin Dashboard -> Database"
-                  }
-                },
-                "position": {
-                  "distance": 0.5,
-                  "args": {
-                    "keepGradient": true,
-                    "ensureLegibility": true
-                  }
-                }
-              }
-            ],
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Admin Dashboard -> Database",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "isTrustBoundary": false
-            },
-            "id": "391c1550-213f-4d59-a853-484985df64cc",
-            "source": {
-              "cell": "process2"
-            },
-            "target": {
-              "cell": "store1"
-            },
-            "vertices": []
+            "id": "E5",
+            "type": "Process",
+            "name": "Admin Dashboard",
+            "description": "Admin interface for post/account management.",
+            "x": 300,
+            "y": 200,
+            "width": 160,
+            "height": 60
           }
         ],
-        "version": "2.3.0",
-        "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0,
-        "diagramType": "Generic",
-        "placeholder": "New generic diagram description"
+        "dataFlows": [
+          {
+            "from": "E1",
+            "to": "E2",
+            "description": "Customer -> Public Web App"
+          },
+          {
+            "from": "E2",
+            "to": "E3",
+            "description": "Public Web App -> Database"
+          },
+          {
+            "from": "E4",
+            "to": "E5",
+            "description": "Admin -> Admin Dashboard"
+          },
+          {
+            "from": "E5",
+            "to": "E3",
+            "description": "Admin Dashboard -> Database"
+          }
+        ],
+        "trustBoundaries": [
+          {
+            "id": "TB1",
+            "elements": ["E1", "E2"],
+            "description": "Public trust boundary: separates untrusted customer traffic."
+          },
+          {
+            "id": "TB2",
+            "elements": ["E4", "E5"],
+            "description": "Admin trust boundary: isolates privileged operations."
+          }
+        ],
+        "diagramJson": {
+          "cells": [
+            {
+              "id": "actor1",
+              "type": "tm.Actor",
+              "z": 1,
+              "position": { "x": 100, "y": 50 },
+              "size": { "width": 120, "height": 60 },
+              "labels": [
+                {
+                  "attrs": {
+                    "text": {
+                      "text": "Customer (E1)"
+                    }
+                  }
+                }
+              ],
+              "attrs": {
+                "body": {
+                  "fill": "#ffffff",
+                  "stroke": "#000000"
+                }
+              }
+            },
+            {
+              "id": "process1",
+              "type": "tm.Process",
+              "z": 2,
+              "position": { "x": 300, "y": 50 },
+              "size": { "width": 160, "height": 60 },
+              "labels": [
+                {
+                  "attrs": {
+                    "text": {
+                      "text": "Public Web App (E2)"
+                    }
+                  }
+                }
+              ],
+              "attrs": {
+                "body": {
+                  "fill": "#ffffff",
+                  "stroke": "#000000"
+                }
+              }
+            },
+            {
+              "id": "store1",
+              "type": "tm.Store",
+              "z": 3,
+              "position": { "x": 550, "y": 50 },
+              "size": { "width": 140, "height": 60 },
+              "labels": [
+                {
+                  "attrs": {
+                    "text": {
+                      "text": "Database (E3)"
+                    }
+                  }
+                }
+              ],
+              "attrs": {
+                "body": {
+                  "fill": "#ffffff",
+                  "stroke": "#000000"
+                }
+              }
+            },
+            {
+              "id": "actor2",
+              "type": "tm.Actor",
+              "z": 4,
+              "position": { "x": 100, "y": 200 },
+              "size": { "width": 120, "height": 60 },
+              "labels": [
+                {
+                  "attrs": {
+                    "text": {
+                      "text": "Admin (E4)"
+                    }
+                  }
+                }
+              ],
+              "attrs": {
+                "body": {
+                  "fill": "#ffffff",
+                  "stroke": "#000000"
+                }
+              }
+            },
+            {
+              "id": "process2",
+              "type": "tm.Process",
+              "z": 5,
+              "position": { "x": 300, "y": 200 },
+              "size": { "width": 160, "height": 60 },
+              "labels": [
+                {
+                  "attrs": {
+                    "text": {
+                      "text": "Admin Dashboard (E5)"
+                    }
+                  }
+                }
+              ],
+              "attrs": {
+                "body": {
+                  "fill": "#ffffff",
+                  "stroke": "#000000"
+                }
+              }
+            },
+            {
+              "id": "flow1",
+              "type": "tm.Flow",
+              "source": { "id": "actor1" },
+              "target": { "id": "process1" },
+              "z": 6,
+              "vertices": [],
+              "labels": [
+                {
+                  "attrs": {
+                    "text": {
+                      "text": "Customer -> Public Web App"
+                    }
+                  }
+                }
+              ],
+              "attrs": {
+                ".connection": { "stroke": "#000000" }
+              }
+            },
+            {
+              "id": "flow2",
+              "type": "tm.Flow",
+              "source": { "id": "process1" },
+              "target": { "id": "store1" },
+              "z": 7,
+              "vertices": [],
+              "labels": [
+                {
+                  "attrs": {
+                    "text": {
+                      "text": "Public Web App -> Database"
+                    }
+                  }
+                }
+              ],
+              "attrs": {
+                ".connection": { "stroke": "#000000" }
+              }
+            },
+            {
+              "id": "flow3",
+              "type": "tm.Flow",
+              "source": { "id": "actor2" },
+              "target": { "id": "process2" },
+              "z": 8,
+              "vertices": [],
+              "labels": [
+                {
+                  "attrs": {
+                    "text": {
+                      "text": "Admin -> Admin Dashboard"
+                    }
+                  }
+                }
+              ],
+              "attrs": {
+                ".connection": { "stroke": "#000000" }
+              }
+            },
+            {
+              "id": "flow4",
+              "type": "tm.Flow",
+              "source": { "id": "process2" },
+              "target": { "id": "store1" },
+              "z": 9,
+              "vertices": [],
+              "labels": [
+                {
+                  "attrs": {
+                    "text": {
+                      "text": "Admin Dashboard -> Database"
+                    }
+                  }
+                }
+              ],
+              "attrs": {
+                ".connection": { "stroke": "#000000" }
+              }
+            }
+          ]
+        }
       }
     ],
     "threats": [
@@ -944,8 +327,6 @@
         "category": "Data Breach",
         "description": "Database vulnerabilities may lead to unauthorized data access."
       }
-    ],
-    "diagramTop": 10,
-    "threatTop": 100
+    ]
   }
 }

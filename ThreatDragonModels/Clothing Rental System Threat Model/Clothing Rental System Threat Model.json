@@ -907,10 +907,10 @@
           }
         ],
         "version": "2.3.0",
-        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
         "id": 0,
-        "diagramType": "STRIDE",
-        "placeholder": "New STRIDE diagram description"
+        "diagramType": "Generic",
+        "placeholder": "New generic diagram description"
       }
     ],
     "threats": [
